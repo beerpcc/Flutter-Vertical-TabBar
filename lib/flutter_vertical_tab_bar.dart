@@ -117,26 +117,9 @@ class _VerticalTabsState extends State<VerticalTabs>
                       child: ListView.builder(
                         itemCount: widget.tabs.length,
                         itemBuilder: (context, index) {
-                          String tab = widget.tabs[index];
+                          Widget tab = widget.tabs[index];
 
-                          double? left, right;
-                          if (widget.direction == TextDirection.rtl) {
-                            left = ((widget.indicatorSide == IndicatorSide.end)
-                                ? 0
-                                : null);
-                            right =
-                                ((widget.indicatorSide == IndicatorSide.start)
-                                    ? 0
-                                    : null);
-                          } else {
-                            right = ((widget.indicatorSide == IndicatorSide.end)
-                                ? 0
-                                : null);
-                            left =
-                                ((widget.indicatorSide == IndicatorSide.start)
-                                    ? 0
-                                    : null);
-                          }
+                          
 
                           return Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8),
@@ -171,14 +154,7 @@ class _VerticalTabsState extends State<VerticalTabs>
                                         duration: widget.changePageDuration,
                                         curve: widget.changePageCurve);
                                   },
-                                  child: Container(
-                                    color: Colors.transparent,
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: Text(tab,
-                                        style: _selectedIndex == index
-                                            ? widget.selectedTabTextStyle
-                                            : widget.unSelectedTabTextStyle),
-                                  ),
+                                  child: tab,
                                 ),
                               ],
                             ),
