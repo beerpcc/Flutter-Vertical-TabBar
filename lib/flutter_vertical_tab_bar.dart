@@ -129,8 +129,6 @@ class _VerticalTabsState extends State<VerticalTabs>
                                   top: 2,
                                   bottom: 2,
                                   width: widget.indicatorWidth,
-                                  left: left,
-                                  right: right,
                                   child: ScaleTransition(
                                     scale: Tween(begin: 0.0, end: 1.0).animate(
                                       CurvedAnimation(
