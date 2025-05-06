@@ -9,7 +9,7 @@ class VerticalTabs extends StatefulWidget {
   final double tabsWidth;
   final double indicatorWidth;
   final IndicatorSide indicatorSide;
-  final List<String> tabs;
+  final List<Widget> tabs;
   final List<Widget> contents;
   final TextDirection direction;
   final Color indicatorColor;
